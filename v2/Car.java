@@ -28,6 +28,7 @@ public class Car {
         return Integer.hashCode(ID);
     }
 
+
     private Vector2 updateVelocity(int x, int y)
     {
         velocity.update(x,y);
@@ -68,5 +69,20 @@ public class Car {
         return new Packet(position,velocity,acceleration);
     }
 
+    public Packet addNear(int id, Packet p)
+    {
+        return proximity.put(id,p);
+    }
+
+    public boolean isNear(Car c)
+    {
+        return proximity.containsKey(c.getID());
+    }
+
+    public boolean idNear(int ID)
+    {
+        return proximity.containsKey(ID);
+    }
+    
 
 }

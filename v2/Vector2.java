@@ -8,6 +8,16 @@ public class Vector2 implements Comparable<Vector2> {
         this.y = y;
     }
 
+    public double getX()
+    {
+        return x;
+    }
+
+    public double getY()
+    {
+        return y;
+    }
+
     public int compareTo(Vector2 other)
     {
         if (mag()>other.mag())
