@@ -1,3 +1,4 @@
+import java.util.HashMap;
 public class Car {
 
     private int ID;
@@ -6,10 +7,29 @@ public class Car {
     private Vector2 velocity;
     private Vector2 acceleration;
 
+    private HashMap<Integer,Packet> proximity;
+
+
+
+
     private Vector2 updatePosition(int x, int y)
     {
         position.update(x,y);
         return position;
+    }
+
+    private boolean equals(Car other)
+    {
+        return ID == other.ID;
+    }
+
+    public int getID()
+    {
+        return ID;
+    }
+    public int hashCode()
+    {
+        return Integer.hashCode(ID);
     }
 
     private Vector2 updateVelocity(int x, int y)
