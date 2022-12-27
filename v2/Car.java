@@ -6,11 +6,7 @@ public class Car {
     private Vector2 position;
     private Vector2 velocity;
     private Vector2 acceleration;
-
     private HashMap<Integer,Packet> proximity;
-
-
-
 
     private Vector2 updatePosition(int x, int y)
     {
@@ -69,7 +65,7 @@ public class Car {
 
     public Packet generatePacket()
     {
-        return new Packet(ID, position,velocity,acceleration);
+        return new Packet(position,velocity,acceleration);
     }
 
 
