@@ -1,5 +1,7 @@
 public class Car {
 
+    private int ID;
+
     private Vector2 position;
     private Vector2 velocity;
     private Vector2 acceleration;
