@@ -5,3 +5,5 @@ I won second place in the competition and received the award for innovation in t
 
 Presentation: https://docs.google.com/presentation/d/1hMluvf4LuVvWBGXcQly4nSAcwp1LE7Qjy_JLmjwFofQ/edit?usp=sharing
 Proposal: https://docs.google.com/document/d/14FM-T9vjs1Jh2BBWxFvxBnZgjnmR4KZizq4ISJk23uY/edit?usp=sharing
+
+Update: Looking back on this code, there are a ton of improvements I think I could make, including speed, architecture, and readability. I'm currently working on reimplementing this project in java.
