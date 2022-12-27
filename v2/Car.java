@@ -22,6 +22,20 @@ public class Car {
         return acceleration;
     }
 
+    public Vector2 getPosition()
+    {
+        return position;
+    }
+
+    public Vector2 getVelocity() {
+        return velocity;
+    }
+
+    public Vector2 getAcceleration()
+    {
+        return acceleration;
+    }
+
 
 
 }
