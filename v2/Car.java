@@ -6,19 +6,19 @@ public class Car {
     private Vector2 velocity;
     private Vector2 acceleration;
 
-    public Vector2 updatePosition(int x, int y)
+    private Vector2 updatePosition(int x, int y)
     {
         position.update(x,y);
         return position;
     }
 
-    public Vector2 updateVelocity(int x, int y)
+    private Vector2 updateVelocity(int x, int y)
     {
         velocity.update(x,y);
         return velocity;
     }
 
-    public Vector2 updateAcceleration(int x, int y)
+    private Vector2 updateAcceleration(int x, int y)
     {
         acceleration.update(x,y);
         return acceleration;
@@ -38,6 +38,19 @@ public class Car {
         return acceleration;
     }
 
+    public Packet passTime(int t)
+    {
+        Vector2 deltaX = velocity.mul(t).add(acceleration.mul(.5*Math.pow(t,2)));
+        Vector2 deltaV = acceleration.mul(t);
+        position.update(deltaX);
+        velocity.update(deltaV);
+        return generatePacket();
+    }
+
+    public Packet generatePacket()
+    {
+        return new Packet(ID, position,velocity,acceleration);
+    }
 
 
 }
