@@ -14,4 +14,10 @@ public class Packet {
         this.acc = acc;
     }
 
+    public String toString()
+    {
+        return "Position:" + pos + "Velocity: " + vel + "Acceleration: " + acc;
+    }
+
+
 }

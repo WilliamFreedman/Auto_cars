@@ -11,6 +11,11 @@ public class Car extends Position{
         position = new Vector2(0,0);
     }
 
+    public String toString()
+    {
+        return String.valueOf(ID);
+    }
+
     private Vector2 updatePosition(int x, int y)
     {
         position.update(x,y);

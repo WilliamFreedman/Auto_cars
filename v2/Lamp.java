@@ -4,12 +4,15 @@ public class Lamp extends Position{
 
     private int ID;
 
-
     private HashMap<Integer,Car> cars;
 
     public Lamp()
     {
         position = new Vector2(0,0);
+    }
+    public String toString()
+    {
+        return String.valueOf(ID);
     }
     public Vector2 distance(Lamp l)
     {
@@ -20,7 +23,5 @@ public class Lamp extends Position{
     {
         return position.sub(c.getPosition());
     }
-
-
 
 }

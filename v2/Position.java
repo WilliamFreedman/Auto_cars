@@ -6,6 +6,8 @@ public abstract class Position {
         return position;
     }
 
+
+
     public Vector2 distance(Position p)
     {
        return position.sub(p.getPosition());
