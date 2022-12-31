@@ -28,6 +28,15 @@ public class Car {
         return Integer.hashCode(ID);
     }
 
+    public Vector2 distance(Lamp l)
+    {
+        return position.sub(l.getPosition());
+    }
+
+    public Vector2 distance(Car c)
+    {
+        return position.sub(c.getPosition());
+    }
 
     private Vector2 updateVelocity(int x, int y)
     {

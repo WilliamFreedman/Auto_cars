@@ -50,6 +50,12 @@ public class Vector2 implements Comparable<Vector2> {
         return new Vector2(x+o.x,y+o.y);
     }
 
+    public Vector2 sub(Vector2 o)
+    {
+        return new Vector2(x-o.x,y-o.y);
+    }
+
+
     public Vector2 mul(double scaling)
     {
         return new Vector2(x*scaling,y*scaling);

@@ -1,19 +1,30 @@
-import java.util.HashSet;
+import java.util.HashMap;
 public class Env {
 
     private int height;
     private int width;
 
-    private HashSet<Car> cars;
+    private HashMap<Integer,Car> cars;
 
-    public HashSet<Car> getCars()
+    public HashMap<Integer,Car> getCars()
     {
         return cars;
     }
 
-    public boolean newCar(Car c)
+    public int getHeight()
     {
-        return cars.add(c);
+        return height;
+    }
+
+    public int getWidth()
+    {
+        return width;
+    }
+
+
+    public void newCar(Car c)
+    {
+        cars.put(c.getID(),c);
     }
 
 
