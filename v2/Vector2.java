@@ -8,6 +8,11 @@ public class Vector2 implements Comparable<Vector2> {
         this.y = y;
     }
 
+    public String toString()
+    {
+        return "<" + x + ", " + y + ">";
+    }
+
     public double getX()
     {
         return x;

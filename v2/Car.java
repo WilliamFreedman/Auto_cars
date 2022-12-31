@@ -1,12 +1,15 @@
 import java.util.HashMap;
-public class Car {
+public class Car extends Position{
 
     private int ID;
-
-    private Vector2 position;
     private Vector2 velocity;
     private Vector2 acceleration;
     private HashMap<Integer,Packet> proximity;
+
+    public Car()
+    {
+        position = new Vector2(0,0);
+    }
 
     private Vector2 updatePosition(int x, int y)
     {
@@ -26,16 +29,6 @@ public class Car {
     public int hashCode()
     {
         return Integer.hashCode(ID);
-    }
-
-    public Vector2 distance(Lamp l)
-    {
-        return position.sub(l.getPosition());
-    }
-
-    public Vector2 distance(Car c)
-    {
-        return position.sub(c.getPosition());
     }
 
     private Vector2 updateVelocity(int x, int y)

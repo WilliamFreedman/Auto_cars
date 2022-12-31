@@ -1,18 +1,16 @@
 import java.util.HashMap;
 
-public class Lamp {
+public class Lamp extends Position{
 
     private int ID;
 
-    private Vector2 position;
 
     private HashMap<Integer,Car> cars;
 
-    public Vector2 getPosition()
+    public Lamp()
     {
-        return position;
+        position = new Vector2(0,0);
     }
-
     public Vector2 distance(Lamp l)
     {
         return position.sub(l.getPosition());
