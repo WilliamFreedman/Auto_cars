@@ -4,7 +4,7 @@ public class Car extends Position{
     private int ID;
     private Vector2 velocity;
     private Vector2 acceleration;
-    private HashMap<Integer,Packet> proximity;
+    private HashMap<Integer,Car> proximity;
 
     public Car()
     {
@@ -73,22 +73,17 @@ public class Car extends Position{
 
     public Packet generatePacket()
     {
-        return new Packet(position,velocity,acceleration);
+        return new Packet(ID,position,velocity,acceleration);
     }
 
-    public Packet addNear(int id, Packet p)
+    public void addNear(Car c)
     {
-        return proximity.put(id,p);
+        proximity.put(c.ID,c);
     }
 
     public boolean isNear(Car c)
     {
-        return proximity.containsKey(c.getID());
-    }
-
-    public boolean idNear(int ID)
-    {
-        return proximity.containsKey(ID);
+        return proximity.containsKey(c.ID);
     }
     
 

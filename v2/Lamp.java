@@ -1,14 +1,31 @@
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class Lamp extends Position{
 
     private int ID;
 
-    private HashMap<Integer,Car> cars;
+    private int r;
+
+    private HashSet<Car> cars;
 
     public Lamp()
     {
         position = new Vector2(0,0);
+    }
+
+    public int getID()
+    {
+        return ID;
+    }
+
+    public int getR()
+    {
+        return r;
+    }
+
+    public void setR(int r)
+    {
+        this.r = r;
     }
     public String toString()
     {
